@@ -1,0 +1,98 @@
+@use '../util' as *;
+
+.card {
+    width: 15.9375rem; //temporary
+
+    background-color: var(--dark-card);
+    color: var(--dark-text1);
+    text-align: center;
+
+    padding: 1.5625rem;
+    border-radius: .3125rem;
+
+    &--facebook {
+
+    }
+    
+    &--twitter {
+
+    }
+
+    &--instagram {
+
+    }
+
+    &--youtube {
+
+    }
+
+    &__platform {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.25rem;
+        margin-top: .3125rem;
+        margin-bottom: 1.75rem;
+
+    }
+
+    &__icon {
+        margin-right: .5rem;
+
+    }
+
+    &__username {
+        font-size: .75rem;
+        font-weight: 700;
+        color: var(--text-color2);
+
+    }
+
+    &__followers {
+        margin-bottom: 1.5625rem;
+
+    }
+
+    &__count {
+        color: var(--light-bg);
+        font-weight: 700;
+        letter-spacing: -0.125rem;
+        line-height: 1;
+        margin-bottom: .25rem;
+
+        &--big {
+            font-size: 3.5rem;
+
+        }
+
+    }
+
+    &__label {
+        font-size: .75rem;
+        letter-spacing: .3125rem;
+        font-weight: 400;
+        color: var(--text-color2);
+        text-transform: uppercase;
+    }
+
+    &__change {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .75rem;
+
+        &--up {
+            color: var(--limegreen);
+
+        }
+
+        > img {
+            margin-right: .25rem;
+        }
+
+    }
+
+    &__number {
+
+    }
+}
