@@ -1,0 +1,91 @@
+@use '../util' as *;
+
+.toggle {
+    border: none;
+    // display: inline-block;
+    display: flex;
+    margin: 0;
+
+    @include breakpoint-down(small) {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+
+
+    &__wrapper {
+        position: relative;
+        height: 1.5rem;
+
+
+    }
+
+    input[type='radio'] {
+        opacity: 0; //if display:none, keyboard navigation can't be used
+        margin: 0;
+        padding: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+
+        &:focus ~ .toggle__button {
+            border: 2px solid var(--toggle-light);
+        }
+
+    }
+
+    &__background {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background: linear-gradient(225deg, var(--toggle-bg-end), var(--toggle-bg-start));
+        border-radius: .75rem;
+        pointer-events: none;
+
+
+    }
+
+    &__button {
+        // position: relative; //it worked (our method)
+        // display: block;
+        // top: -70%;
+        // left: 10%;
+        position: absolute;
+        left: .1875rem;
+        top: .1875rem;
+        right: 100%;
+        width: 1.125rem;
+        height: 1.125rem;
+        border-radius: 50%;
+        background-color: var(--dark-bg);
+        transition: all 200ms ease-in-out;
+    }
+
+    #light:checked ~ .toggle__button {
+        left: calc(100% - 1.3125rem);
+        right: -100%;
+    }
+
+    label {
+        font-size: .875rem;
+        font-weight: 700;
+        color: var(--toggle);
+
+        &[for="dark"] {
+            position: relative;
+            line-height: 1.5rem;
+            margin-right: .8125rem;
+            
+        }
+
+        &[for="light"] {
+            // position:absolute;
+            line-height: 1.5rem;
+            margin-right: .8125rem;
+        }
+        
+    }
+}

@@ -1,2 +1,2 @@
-"use strict";console.log("kurwa"),console.log("kurwa"),console.log("kurwa");
+"use strict";console.log("no w koncu");
 //# sourceMappingURL=script.js.map

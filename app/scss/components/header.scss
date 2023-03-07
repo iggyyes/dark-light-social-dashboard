@@ -1,0 +1,21 @@
+@use '../util' as *;
+
+.header {
+    margin-top: 2.25rem;
+
+    @include breakpoint(medium) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+
+        > p {
+            font-size: .875rem;
+            font-weight: 700;
+            color: var(--dark-text1);
+        }
+
+    }
+
+}
