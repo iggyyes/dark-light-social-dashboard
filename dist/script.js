@@ -1,2 +1,2 @@
-"use strict";console.log("no w koncu");
+"use strict";console.log("no w koncu");var darkButton=document.getElementById("dark"),lightButton=document.getElementById("light"),setDarkMode=function(){document.querySelector("body").classList="dark",localStorage.setItem("colorMode","dark")},setLightMode=function(){document.querySelector("body").classList="light",localStorage.setItem("colorMode","light")},radioButtons=document.querySelectorAll(".toggle__wrapper input");radioButtons.forEach((function(t){t.addEventListener("click",(function(t){darkButton.checked?setDarkMode():setLightMode()}))}));
 //# sourceMappingURL=script.js.map
